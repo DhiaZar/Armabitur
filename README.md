@@ -1,2 +1,2 @@
 # Armabitur
-E-tools website project
+E-tools website dedicated to optimizing productivity in Education/Work
