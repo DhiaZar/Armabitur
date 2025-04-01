@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include respond(big-ds) {
+        font-size: 75%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 1rem;
+    min-height: 100vh;
+
+    @include respond(tab-land) {
+        padding: 0;
+    }
+
+}
+
+::selection {
+    background-color: #ff6348;
+    color: #fff;
+}

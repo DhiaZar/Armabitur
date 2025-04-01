@@ -1,0 +1,46 @@
+.header--privacy {
+    margin-top: 2rem;
+    padding: 2rem 10rem;
+
+    &__title {
+        font-size: 5rem;
+        text-transform: capitalize;
+    }
+}
+
+
+.main {
+    padding: 4rem 10rem;
+
+    & h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    & ul {
+        list-style: none;
+        margin-left: 1rem;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+
+        & > li:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    & a {
+        &:visited, 
+        &:link {
+            color: #3742fa;
+            text-decoration: none;
+            word-wrap: break-word;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+}
+

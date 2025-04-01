@@ -1,0 +1,373 @@
+.stack {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .3s ease-in-out; 
+        transform: translateY(calc(-100% + 3.1rem));
+        z-index: 100;
+    }
+    
+    
+    padding: 10rem;
+    background: rgba(0, 0, 0, .1);
+    border-bottom-right-radius: 10px;
+
+
+    &__btn {
+        align-self: start;
+        padding: .7rem 1.2rem;
+        cursor: pointer;
+        border: none;
+        background: rgba(0, 0, 0, .7);
+
+        & span {
+            color: #fff;
+            font-size: 1.8rem;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            user-select: none;
+        }
+
+        &:focus,
+        &:hover,
+        &:active {
+            outline: none;
+            background: rgba(0, 0, 0, .8);
+        }
+    }
+
+    &__checkbox {
+        display: none;
+        
+        &:checked ~ .stack__container{
+            transform: translateY(0);
+        }
+    }
+    
+}
+
+.workspace {
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &__background-img {
+        width: 50%;
+        opacity: .3;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+    }
+
+
+    &__navbtn {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        font-size: 4.8rem;
+        font-family: inherit;
+        outline: none;
+        
+        & span {
+            padding: .1rem 1.8rem .1rem 1.8rem;
+            background: rgba(0, 0, 0, .7);
+            position: absolute;
+            top: -2.8rem;
+            right: 0;
+            
+            &:hover,
+            &:focus,
+            &:active {
+                background: rgba(0, 0, 0, .8);
+            }
+        }
+
+    }
+
+    &__sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        height: 100%;
+        transform: translateX(110%);
+        transition: all .2s ease-in-out;
+
+        & ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            background-color: #fff;
+            align-items: stretch;
+            box-shadow: 0 3rem 4rem rgba(#000, .2 );
+            & > li {
+                text-align: center;
+            }
+        }    
+
+        & a:link,
+        & a:visited,
+        &__btn {
+            text-decoration: none;
+            color: #2f3542;
+            width: 100%;
+            border-radius: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            border: none;
+            padding: 2rem 3rem;
+            background-color: #fff;
+            font-family: 'Orienta', sans-serif;
+            border-bottom: 1px solid rgba(119, 119, 119, 0.322);
+            display: inline-block;
+            cursor: pointer;
+            z-index: 1000;
+            outline: none;
+
+            &:focus,
+            &:active,
+            &:hover {
+                background-color: darken($color: #fff, $amount: 3);
+            }
+        }
+        
+        &__gen-container {
+            display: flex;
+            flex-direction: column;
+
+            &__sub-container {
+                background-color: darken($color: #fff, $amount: 3);
+                padding: 3.5rem 1rem;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                z-index: 100;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all .2s;
+
+                & input {
+                    padding: .7rem .2rem; 
+                    font-size: 1.4rem;
+                    font-family: inherit;
+                }
+
+                & button {
+                    cursor: pointer;
+                    font-family: inherit;
+                    margin-left: 1rem;
+                }
+            }
+
+            #genBtn {
+                padding: 2rem 1rem !important;
+                user-select: none;
+            }
+
+            #genCheckbox {
+                display: none;
+
+                &:checked + .workspace__sidebar__gen-container__sub-container {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__login {
+            margin-top: auto;
+            
+            & a {
+                border-bottom: none !important;
+            }
+        }
+        
+        &__logo {
+            height: 5rem;
+            margin-top: 1rem;
+        }
+    }
+
+}
+
+
+div[class*="widget"]  {
+    border-radius: 20px;
+    border: none;
+    padding: 8rem;
+    background-color: azure;
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transition: box-shadow .3s, opacity .5s, visibility .5s;
+    z-index: 9999999;
+    touch-action: none;
+    
+    &:active {
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, .3);
+    }
+    &:focus,
+    &:active {
+        z-index: 99999999;
+        outline: none;
+    }
+
+}
+
+.tool-area {
+    background-color: darken($color: #eee, $amount: 3);
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    height: calc(100% - 3rem);
+    width: 100%;
+    border-radius: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+}
+
+
+.nav-btns {
+    position: absolute;
+    top: .8rem;
+    right: 10%;
+    width: 45%;
+
+    & > * {
+        padding: .7rem;
+        float: right;
+        margin-left: .8rem;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 .1rem .2rem rgba(#000, .6);
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__delete {
+        background-color: #f00;
+
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: darken($color: #f00, $amount: 3);
+        }
+    }
+
+    &__fullscreen {
+        background-color: #ff0;
+
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: darken($color: #ff0, $amount: 3);
+        }
+    }
+
+    &__minimize {
+        background-color: #0f0;
+
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: darken($color: #0f0, $amount: 3);
+        }
+    }
+}
+
+
+.min-w {
+    border-radius: 20px;
+    border: none;
+    padding: 4rem 8rem;
+    background-color: azure;
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: box-shadow .3s, opacity .5s, visibility .5s;
+    z-index: 99999999;
+    touch-action: none;
+    opacity: 0;
+    visibility: hidden;
+
+    &:focus {
+        outline: none;
+        z-index: 99999999999;
+    }
+}
+
+.add {
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn {
+        padding: 1.5rem 3rem;
+        border-radius: 50%;
+        border: none;
+        background-color: #777;
+        cursor: pointer;
+        
+        &__span {
+            font-size: 400%;
+            color: #fff;
+        }
+        
+        &:focus,
+        &:active,
+        &:hover {
+            outline: none;
+            background-color: darken($color: #777, $amount: 6);
+        }
+    }
+}
+
+.toHide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.toOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-open {
+    transform: translateX(0);
+
+    & ~ .workspace__navbtn span {
+        background-color: #fff;
+        color: #2f3542;
+
+        &:focus,
+        &:active,
+        &:hover {
+            background: rgba(#000, .7);
+            color: #fff;
+        }
+    }
+}

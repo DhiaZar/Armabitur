@@ -1,0 +1,49 @@
+.features {
+    margin-top: -9rem;
+    padding: 18rem 10rem;
+    background-color: #fff;
+    position: relative;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 3rem;
+        margin-top: 5rem;
+    }
+
+    &__subcontainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        color: #1e90ff;
+    }
+
+    &__anchor {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        z-index: -1000;
+    }
+
+    &__icon {
+        background-size: contain;
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        margin-left: -1rem;
+        
+        &--tool {
+            background-image: url(./assets/hammer-outline.svg);
+            margin-right: .5rem;
+        }
+        
+        &--ws {
+            background-image: url(./assets/briefcase-outline.svg);
+            margin-right: .5rem;
+        }
+    }
+}

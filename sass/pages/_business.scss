@@ -1,0 +1,20 @@
+.header--contact {
+    padding: 2rem 10rem;
+
+    &__title {
+        font-size: 7rem;
+    }
+}
+
+.main--contact {
+    padding: 2rem 10rem;
+    margin-top: -2rem;
+
+    &__email {
+        margin-left: 2rem;
+        border: 1px solid rgba(#777, 0.5);
+        display: inline-block;
+        padding: 1rem;
+    }
+}
+

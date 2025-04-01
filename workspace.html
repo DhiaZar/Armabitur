@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description of website" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=B612:ital@1&family=Encode+Sans+Semi+Expanded:wght@300&family=Orienta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.scss" />
+    <title>My Workspace - Opsilia</title>
+</head>
+<body>
+    <div class="workspace__sidebar">
+        <ul>
+            <li><img src="./assets/Opsilia-Logo.png" alt="Logo" class="workspace__sidebar__logo"></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><button class="workspace__sidebar__btn">Save Workspace</button></li>
+            <li><button class="workspace__sidebar__btn">Load Workspace</button></li>
+            <li><button class="workspace__sidebar__btn">Share Workspace</button></li>
+            <li>
+                <div class="workspace__sidebar__gen-container">
+                    <label tabindex="0" for="genCheckbox" id="genBtn" class="workspace__sidebar__btn">Generate Workspace</label>
+                    <input type="checkbox" id="genCheckbox">
+                    <div class="workspace__sidebar__gen-container__sub-container">
+                        <input type="text" placeholder="Enter Valid Code">
+                        <button>Generate</button>
+                    </div>
+                </div>
+            </li>
+            <li class="workspace__sidebar__login"><a href="./login.html">Sign In</a></li>
+        </ul>
+    </div>
+    <button class="workspace__navbtn"><span>...</span></button>
+    <input class="stack__checkbox" type="checkbox" id="stackcheck">
+    <div class="stack__container">
+        <div class="stack">
+            <div class="pre-widget" tabindex="0"></div>
+            <div class="pre-widget" tabindex="0"></div>
+        </div>
+        <label for="stackcheck" class="stack__btn" tabindex="0"><span>&rang;</span></label>
+    </div>
+    <div class="workspace">
+        <!-- <div class="widget" tabindex="0" data-state="windowed" id="1">
+            <div class="nav-btns">
+                <button class="nav-btns__delete"></button>
+                <button class="nav-btns__fullscreen"></button>
+                <button class="nav-btns__minimize"></button>
+            </div>
+            <div class="tool-area">
+            </div>
+        </div> -->
+        <!-- <div class="min-w" data-forWidget="1" tabindex="0">
+            <div class="nav-btns">
+                <button class="nav-btns__delete"></button>
+                <button class="nav-btns__minimize"></button>
+            </div>
+        </div> -->
+        <img src="./assets/Opsilia-Logo.png" alt="Background Image" class="workspace__background-img">
+    </div>
+    <div class="tools-select__container">
+        <div class="tools-select__item" id="stickyNote">
+            <img class="tools-select__item__img" src="./assets/sitckynote.png" alt="Sticky Note Image">
+            <div class="tools-select__item__name">Sticky Note</div>
+        </div>
+        <div class="tools-select__item" id="digitalClock">
+            <img class="tools-select__item__img" src="./assets/sitckynote.png" alt="Digital Clock Image">
+            <div class="tools-select__item__name">Digital Clock</div>
+        </div>
+        <div class="tools-select__item" id="analogClock">
+            <img class="tools-select__item__img" src="./assets/sitckynote.png" alt="Analog Clock Image">
+            <div class="tools-select__item__name">Analog Clock</div>
+        </div>
+        <div class="tools-select__item" id="stopWatch">
+            <img class="tools-select__item__img" src="./assets/sitckynote.png" alt="Stopwatch Image">
+            <div class="tools-select__item__name">Stopwatch</div>
+        </div>
+        <div class="tools-select__item">&nbsp;</div>
+        <div class="tools-select__item">&nbsp;</div>
+        <div class="tools-select__item">&nbsp;</div>
+        <div class="tools-select__item">&nbsp;</div>
+        <div class="tools-select__item">&nbsp;</div>
+    </div>
+</body>
+<script src="js/workspace.js"></script>
+</html>

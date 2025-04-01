@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description of website">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital@1&family=Encode+Sans+Semi+Expanded:wght@300&family=Orienta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.scss">
+    <title>Sign Up - Opsilia</title>
+</head>
+<body>
+    <div class="authentication-form__wrapper"> 
+        <form class="authentication-form">
+            <h1 class="authentication-form__title">Create Account</h1>
+
+            <input class="authentication-form__input" type="text" placeholder="Username" id="signup-username" required>
+
+            <p class="authentication-form__error-message-signup">Username is too short or contains forbidden special characters.</p>
+
+            <input class="authentication-form__input" type="email" placeholder="E-Mail" id="signup-email" required>
+
+            <p class="authentication-form__error-message-signup">The E-Mail address must be valid.</p>
+
+            <input class="authentication-form__input" type="password" placeholder="Password" id="signup-password" required>
+            
+            <p class="authentication-form__error-message-signup">Must be longer than 8 characters and contain at least 1 letter and 1 number.</p>
+
+            <input class="authentication-form__input" type="password" id="signup-confpassword" placeholder="Confirm Password" required>
+
+            <p class="authentication-form__error-message-signup">The passwords must match.</p>
+
+            <button type="submit" class="authentication-form__btn-login" id="signup-btn">Sign Up</button>
+
+            <p class="authentication-form__terms">By clicking Sign Up, you're agreeing to our <a href="./conditions.html">Terms</a> and <a href="./privacypolicy.html">Privacy</a> policies.</p>
+
+            <div class="authentication-form__link-container">
+                <a href="./index.html">Home</a>
+                <span>
+                    <p>Already Registered ?</p>
+                    <a href="./login.html">Login</a>
+                </span>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/signup.js"></script>
+</html>

@@ -1,0 +1,109 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #ff4757 0%, #ff6348 50%, #ff7f50 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all .3s;
+
+    @include respond(phone) {
+        position: fixed;
+        height: 100vh;
+        width: 25rem;
+        align-items: start;
+        background: #fff;
+        box-shadow: 0 2rem 4rem rgba(#000, .3);
+        border-radius: 0;
+        transform: translateX(-110%);
+    }
+
+    & ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        
+
+        @media only screen and (max-width: 50em) { 
+            & #nav-contact {
+                display: none;
+            }
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    
+    & ul > li {
+        padding: 1rem;
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+    
+    & ul > li:not(:last-of-type) {
+        margin-right: 2rem;
+
+        @media only screen and (max-width: 50em) { 
+            margin-right: 1rem;
+         };
+
+         @include respond(phone) {
+             border-bottom: 1px solid rgba(#a4b0be, .4);
+         }
+    } 
+
+    & a {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 100px;
+            transition: all .3s;
+            display: inline-block;
+            text-align: center;
+
+            @media only screen and (max-width: 50em) { 
+                font-size: 1.6rem;
+             };
+
+             @include respond(phone) {
+                color: #2f3542;
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            background-color: #5352ed;
+
+            @include respond(phone) {
+                outline: none;
+                background-color: #2f3542;
+                color: #fff;
+
+            }
+        }
+    }
+
+    &__logo {
+        height: 5rem;
+        margin-left: 3rem;
+
+        @include respond(phone) {
+            margin-left: 8.5rem;
+        }
+        
+    }
+}

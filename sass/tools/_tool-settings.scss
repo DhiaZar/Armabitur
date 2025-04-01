@@ -1,0 +1,69 @@
+.tool-settings {
+    &__container {
+        padding:  3rem;
+        background-color: #70a1ff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 20px;
+        transition: all .2s;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        color: #2f3542;
+        transform: translateX(105%);
+        overflow-y: scroll;
+        
+        
+        & p {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        & input {
+            margin-bottom: .8rem;
+        }
+    }
+
+    &__label {
+        font-size: 1.6rem;
+        margin-bottom: .8rem;
+    }
+
+
+    &__btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: contain;
+        display: inline-block;
+        background-image: url(./assets/settings-sharp.svg);
+        padding: .8rem;
+        cursor: pointer;
+        border: none;
+        background-color: inherit;
+        
+
+        &:focus,
+        &:active,
+        &:hover {
+            background-color: darken($color: #eee, $amount: 20);
+        }
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        background-color: transparent;
+    }
+}
+
+.openSettings {
+    transform: translateX(0);
+}

@@ -1,0 +1,51 @@
+.analogclock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    &__btn--settings {
+        position: absolute;
+        top: .8rem;
+        left: .8rem;
+    }
+
+    &__face {
+        width: 10rem;
+        height: 10rem;
+        background: url(./assets/clock-face.png);
+        background-size: cover;
+        border-radius: 50%;
+        border: .5rem solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__hour ,
+    &__min ,
+    &__sec {
+        position: absolute;
+        top: 50%;
+        transform-origin: top;
+        transform: rotate(180deg);
+    }
+
+    &__hour {
+        width: .1rem;
+        height: 1.5rem;
+        background-color: #424855;
+    }
+
+    &__min {
+        width: .1rem;
+        height: 2rem;
+        background-color: #000;
+    }
+
+    &__sec {
+        width: .1rem;
+        height: 3rem;
+        background-color: #dc143c;
+    }
+}

@@ -1,0 +1,225 @@
+
+.authentication-form {
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right bottom,#5352ed 0%,#3742fa 100%);
+    }
+
+
+    padding: 8rem;
+    background-color: rgba(#fff, 0.92);
+    border-radius: 5px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 4rem;
+
+
+    @include respond(phone) {
+        padding: 6rem 4rem;
+    }
+
+
+    &__title {
+        font-size: 4rem;
+        font-family: 'Encode Sans Semi Expanded', sans-serif;
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__input {
+        padding: 1.5rem 3rem;
+        margin-bottom: 1.5rem;
+        border: none;
+        border-bottom: 1px solid #ff6348;
+        box-shadow: 0 1rem 3rem rgba(#000, .05);
+        color: #2f3542;
+        font-family: inherit;
+        font-size: 1.6rem;
+        transition: all .2s;
+
+        &:focus,
+        &:active {
+            outline: none;
+            transform: translateX(5px);
+            box-shadow: 0 1rem 3rem rgba(#000, .15);
+        }
+
+        &:invalid + .authentication-form__error-message-signup {
+            display: inline-block;
+        }
+    }
+
+    &__terms {
+        text-align: center;
+        font-family: inherit;
+        font-size: 1.1rem;
+
+        & a {
+            &:visited,
+            &:link {
+                color: #1e90ff;
+                text-decoration: none;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                outline: none;
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    &__btn-login {
+        padding: 1.5rem 0;
+        border: none;
+        background-color: #ff6348;
+        cursor: pointer;
+        font-family: inherit;
+        color: #fff;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        transition: all .2s;
+        margin-bottom: 1rem;
+
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            transform: translateX(5px);
+        }
+    }
+
+
+    &__link-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-size: 1.2rem;
+
+        & a {
+            &:visited,
+            &:link {
+                padding: 1rem;
+                text-decoration: none;
+                color: #1e90ff;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                outline: none;
+                text-decoration: underline;
+            }
+        }
+
+        & p {
+            padding: 1rem 0;
+            margin-left: 1rem;
+        }
+
+        & span  {
+            display: flex;
+        }
+    }
+
+    &__forgot-ps {
+        background-color: transparent;
+        border: none;
+        padding: 1rem;
+        color: #1e90ff;
+        font-family: inherit;
+        cursor: pointer;
+        font-size: inherit;
+
+        &:hover,
+            &:focus,
+            &:active {
+                outline: none;
+                text-decoration: underline;
+            }
+
+    }
+
+
+    &__error-message {
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        color: red;
+        visibility: hidden;
+    }
+
+    &__error-message-signup {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        color: red;
+        display: none;
+    }
+}
+
+
+.forgot {
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        visibility: hidden;
+        opacity: 0;
+        transition: .2s;
+
+        & p {
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            font-family: inherit;
+        }
+    }
+
+
+    &__btn {
+        padding: 1rem;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 1rem;
+    }
+}
+
+.mailSentMessage {
+    display: none;
+}
+
+.openModal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.blurForm {
+    filter: blur(3px) brightness(80%);
+}

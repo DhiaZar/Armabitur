@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description of website">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital@1&family=Encode+Sans+Semi+Expanded:wght@300&family=Orienta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.scss">
+    <title>Opsilia</title>
+</head>
+<body>
+    <input type="checkbox" class="nav-mobile__checkbox" id="nav-burger">
+    <label for="nav-burger" class="nav-mobile__btn">
+        <span class="nav-mobile__icon">&nbsp;</span>
+    </label>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <img src="./assets/Opsilia-Logo.png" alt="Logo" class="navbar__logo">
+            </li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./workspace.html">Workspace</a></li>
+            <li><a title="Coming Soon" href="">Premium</a></li>
+            <li id="nav-contact"><a href="#contact">Feedback</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <div class="header__content">
+            <h1 class="heading-primary header__title">Opsilia</h1>
+            <h1 class="header__desc">Your favorite E-tools website</h1>
+            <a href="#features" title="Scroll Down" class="header__btn">&darr;</a>
+        </div>
+    </header>
+    <main>
+        <section class="features">
+            <a id="features" class="features__anchor"></a>
+            <h2 class="heading-secondary">What is Opsilia</h2>
+            <div class="features__container">
+                <div class="features__feature">
+                    <div class="features__subcontainer">
+                        <span class="features__icon features__icon--tool"></span>
+                        <h3 class="features__subtitle">Online Tools</h3>
+                    </div>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel adipisci culpa dolores pariatur perferendis illo ex, ab est, quasi esse accusantium cumque quaerat optio fuga nesciunt in, corrupti ut provident.
+                    </p>
+                </div>
+                <div class="features__feature">
+                    <div class="features__subcontainer">
+                        <span class="features__icon features__icon--ws"></span>
+                        <h3 class="features__subtitle">Custom Workspace</h3>
+                    </div>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis similique iste reiciendis quam voluptatum vero accusamus nihil officia ab animi saepe laborum expedita doloremque quibusdam eligendi sit, mollitia quasi.
+                    </p>
+                </div>
+        </section>
+        <section class="ws-intro u-margin-top-medium">
+                <div class="ws-intro__container">
+                    <h2 class="heading-secondary u-margin-bottom-medium">Start Now</h2>
+                    <p class="paragraph u-margin-bottom-small">
+                        Create your custom workspace by combining the several tools at your disposal however you see fit! 
+                    </p>
+                    <p class="paragraph u-margin-bottom-small">
+                        Let your creativity roam free and enjoy your E-tools wether you're learning or experimenting with new stuff!
+                    </p>
+                    <a href="./workspace.html" class="btn-link">Build a workspace &rarr;</a>
+                </div>
+                <div class="ws-intro__img">
+                    <img src="./assets/workspace-vector.png" alt="workspace">
+                </div>
+        </section>
+        <section class="contact">
+            <a id="contact" class="contact__anchor"></a>
+            <div class="contact__content">
+                <h2 class="contact__title u-margin-bottom-medium ">We'd like to hear from you</h2>
+                <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi incidunt, magni labore omnis possimus necessitatibus in distinctio temporibus obcaecati magnam vero unde repudiandae culpa quaerat quos aspernatur sequi explicabo ipsum!</p>
+            </div>
+            <form action="#" class="contact__form">
+                <input name="name" type="text" class="contact__form__input contact__form__input--name" placeholder="Full Name" required>
+                <label for="name" class="contact__form__label">Full Name</label>
+
+                <input name="mail" type="email" class="contact__form__input contact__form__input--mail" placeholder="E-Mail" required>
+                <label for="mail" class="contact__form__label">E-Mail</label>
+
+                <textarea name="message" id="message" cols="20" rows="10" class="contact__form__text" placeholder="Message" required></textarea>
+                <label for="message" class="contact__form__label">Message</label>
+                
+                <button type="submit" class="contact__btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <ul>
+                <li><a href="./index.html" class="footer__content__link">Home</a></li>
+                <li><a title="Coming Soon" href="" class="footer__content__link">Premium</a></li>
+                <li><a href="./privacypolicy.html" class="footer__content__link">Privacy Policy</a></li>
+                <li><a href="./conditions.html" class="footer__content__link">Terms & Conditions</a></li>
+                <li><a href="./contact.html" class="footer__content__link">Contact</a></li>
+                <li><a href="./donations.html" class="footer__content__link">Donate</a></li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <span>
+                © 2020 Copyright: <a href="./index.html" class="footer__copyright__link">Opsilia.com</a>
+            </span>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

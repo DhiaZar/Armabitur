@@ -1,0 +1,102 @@
+.contact {
+    padding: 8rem;
+    background-image: url(./assets/lowpoly-2.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    &__form {
+        background-color: rgba(#fff, .7);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 5rem;
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba(#000, .2);
+        margin-left: 2rem;
+
+        @include respond(tab-port) {
+            margin-top: 3rem;
+        }
+
+
+        &__label {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            color: #2f3542;
+            transition: all .2s;
+        }
+
+        &__input,
+        &__text {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 3px;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            box-shadow: 0 1rem 2rem rgba(#000, .1);
+            transition: all .3s;
+            
+            &:placeholder-shown + .contact__form__label {
+                opacity: 0;
+            }
+
+            &:focus,
+            &:active {
+                outline: none;
+                transform: translateY(-5px);
+                box-shadow: 0 1rem 2rem rgba(#000, .3);
+            }
+        }
+
+        &__text {
+            resize: none;
+        }
+    }
+
+    &__title {
+        font-size: 8rem;
+        color: #fff;
+        line-height: 1;
+    }
+
+    &__btn {
+        padding: 1rem 3rem;
+        background-color: #3742fa;
+        border: none;
+        border-radius: 100px;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Encode Sans Semi Expanded', sans-serif;
+        box-shadow: 0 1rem 2rem rgba(#000, .15);
+        transition: all .3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 2rem rgba(#000, .2);
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+            transform: translateY(-5px) scale(1.05);
+        }
+    }
+
+    & p {
+        color: #fff;
+    }
+
+    &__anchor {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description of website" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=B612:ital@1&family=Encode+Sans+Semi+Expanded:wght@300&family=Orienta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.scss" />
+    <title>My Account - Opsilia</title>
+</head>
+<body>
+    <input type="checkbox" class="nav-mobile__checkbox" id="nav-burger" />
+    <label for="nav-burger" class="nav-mobile__btn">
+      <span class="nav-mobile__icon">&nbsp;</span>
+    </label>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <img
+            src="./assets/Opsilia-Logo.png"
+            alt="Logo"
+            class="navbar__logo"
+          />
+        </li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Workspace</a></li>
+        <li><a title="Coming Soon" href="">Premium</a></li>
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./signup.html">Sign up</a></li>
+      </ul>
+    </nav>
+
+    <header class="myaccount__header">
+        <h1 class="myaccount__header__title">Account Settings</h1>
+        <p>Here are your account settings:</p>
+    </header>
+
+    <main class="myaccount__main">
+        <h2>Change Username</h2>
+        <p>If you wish to change your username please click here:</p>
+        <button class="myaccount__btn">Change Username</button>
+
+        <h2>Change E-mail</h2>
+        <p>If you wish to change your E-mail please click here:</p>
+        <button class="myaccount__btn">Change E-mail</button>
+
+        <h2>Change Password</h2>
+        <p>If you wish to change your Password please click here:</p>
+        <button class="myaccount__btn">Change Password</button>
+
+        <h2>Manage Cookies</h2>
+        <p>Cookies are small pieces of data stored in the client's browser for various use cases.</p>
+        <p>Learn More About Cookies <a href="https://www.cookieconsent.com/what-are-cookies/">Here</a>.</p>
+        <p>You can manage your cookies directly in the browser as well as in this page.</p>
+        <button class="myaccount__btn">Allow Every Cookie</button>
+
+
+        <div class="myaccount__toggle-container">
+            <label class="toggle-control" for="opsiliacookies">
+                <input class="toggle-control__checkbox" type="checkbox" checked="checked" id="opsiliacookies" disabled checked>
+                <span class="switch"></span>
+            </label>
+            <p>Opsilia's Cookies:</p>
+        </div>
+        <p>These are cookies necessary for this website to function as intended.</p>
+
+
+
+        <div class="myaccount__toggle-container">
+            <label class="toggle-control" for="analyticalcookies">
+                <input class="toggle-control__checkbox" type="checkbox" checked="checked" id="analyticalcookies">
+                <span class="switch"></span>
+            </label>
+            <p>Analytical Cookies:</p>
+        </div>
+        <p>Analytical cookies are used to determine usage of a site, they may track an individual users, but only to the extent to allow a users journey through the site. They are not used for targeting adverts.
+        Please keep in my mind that turning these Cookies off may reduce our ability to improve user experience across our website.
+        </p>
+
+
+        <div class="myaccount__toggle-container">
+            <label class="toggle-control" for="marketingcookies">
+                <input class="toggle-control__checkbox" type="checkbox" checked="checked" id="marketingcookies">
+                <span class="switch"></span>
+            </label>
+            <p>Marketing Cookies:</p>
+        </div>
+        <p>Marketing cookies are used to target advertising to a user based on previous visits. They are served by third party companies, and track a user across websites.
+        Please keep in my mind that turning these Cookies off may reduce our ability to develop this site through decreased funding.
+        </p>
+
+        <button class="myaccount__btn">Save Settings</button>
+
+        <h2>Sign Out</h2>
+        <p>Please click here to sign out off this website</p>
+        <button class="myaccount__btn">Sign Out</button>
+
+        <h2 class="myaccount__title--del">Delete Account</h2>
+        <p>Please be careful and sure about this decision.</p>
+        <button class="myaccount__btn myaccount__btn--del">Delete Account</button>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+          <ul>
+            <li><a href="./index.html" class="footer__content__link">Home</a></li>
+            <li>
+              <a title="Coming Soon" href="" class="footer__content__link"
+                >Premium</a
+              >
+            </li>
+            <li>
+              <a href="./privacypolicy.html" class="footer__content__link"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="./conditions.html" class="footer__content__link"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li><a href="./contact.html" class="footer__content__link">Contact</a></li>
+            <li><a href="./donations.html" class="footer__content__link">Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer__copyright">
+          <span>
+            © 2020 Copyright:
+            <a href="./index.html" class="footer__copyright__link">Opsilia.com</a>
+          </span>
+        </div>
+      </footer>
+</body>
+<script src="js/myaccount.js"></script>
+</html>
