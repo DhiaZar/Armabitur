@@ -1,6 +1,6 @@
-# Armabiture: Virtual Workspace Web App
+# Armabitur: Virtual Workspace Web App
 
-**Armabiture** is a full-stack virtual workspace designed to boost productivity by offering built-in tools like a calculator, timer, and sticky notes—all accessible from a unified interface.
+**Armabitur** is a full-stack virtual workspace designed to boost productivity by offering built-in tools like a calculator, timer, and sticky notes—all accessible from a unified interface.
 
 ## 🛠 Tech Stack
 
