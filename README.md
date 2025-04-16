@@ -36,7 +36,7 @@ Make sure you have the following installed:
 ```bash
 # Clone the repository
 git clone https://github.com/DhiaZar/Armabitur.git
-cd armabiture
+cd Armabitur
 
 # Install dependencies
 pip install -r requirements.txt
