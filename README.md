@@ -1,2 +1,45 @@
-# Armabitur
-E-tools website dedicated to optimizing productivity in Education/Work
+# Armabiture: Virtual Workspace Web App
+
+**Armabiture** is a full-stack virtual workspace designed to boost productivity by offering built-in tools like a calculator, timer, and sticky notes—all accessible from a unified interface.
+
+## 🛠 Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Python (CherryPy)  
+- **Database:** MongoDB  
+
+## ✨ Features
+
+- 📝 Sticky notes with draggable UI and persistent storage  
+- ⏲ Built-in timer for task tracking  
+- 🧮 Simple calculator  
+- 🔐 User data securely saved in MongoDB for persistent sessions  
+- 🔄 RESTful API for seamless client-server interaction  
+
+## 📸 Screenshots
+
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Python 3.x  
+- pip  
+- MongoDB  
+- (Optional) Virtual environment (venv)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/DhiaZar/Armabitur.git
+cd armabiture
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the server
+python app.py
