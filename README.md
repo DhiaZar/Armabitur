@@ -1,6 +1,6 @@
-# Armabitur: Virtual Workspace Web App
+# Opsilia (codename: Armabitur): Virtual Workspace Web App
 
-**Armabitur** is a full-stack virtual workspace designed to boost productivity by offering built-in tools like a calculator, timer, and sticky notes—all accessible from a unified interface.
+**Opsilia** is a full-stack virtual workspace designed to boost productivity by offering built-in tools like a calculator, timer, and sticky notes—all accessible from a unified interface.
 
 ## 🛠 Tech Stack
 
@@ -18,7 +18,8 @@
 
 ## 📸 Screenshots
 
-
+![Homepage](https://i.imgur.com/rqny45P.jpeg "Homepage")
+Other Project Screenshots: [Imgur Link](https://imgur.com/gallery/opsilia-rxIjTeG)
 
 ## 🚀 Getting Started
 
